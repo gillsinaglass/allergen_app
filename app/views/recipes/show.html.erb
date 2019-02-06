@@ -1,0 +1,6 @@
+<h1><%= @recipe.title %></h1>
+<ul>
+  <% @recipe.recipe_ingredients.each do |ri| %>
+    <li><%= link_to pluralize(ri.quantity, ri.name), ri.ingredient %></li>
+  <% end %>
+</ul>

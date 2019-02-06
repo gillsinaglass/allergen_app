@@ -1,0 +1,18 @@
+<h1>Here are the Ingredients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>User Allergy Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= link_to "#{ingredient.name}", ingredient %></td>
+      <td><%= ingredient.users_count %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

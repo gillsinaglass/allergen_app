@@ -1,0 +1,24 @@
+<h1>All Recipes</h1>
+<table>
+
+<thead>
+  <tr>
+    <th>Title</th>
+    <th>User</th>
+    <th># of Ingredients</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= link_to recipe.title, recipe %></td>
+      <td><%= link_to recipe.user.name, recipe.user %></td>
+      <td><%= recipe.ingredients.count %></td>
+    </tr>
+  <% end %>
+</tbody>
+
+
+
+</table>

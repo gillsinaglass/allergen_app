@@ -1,0 +1,10 @@
+<h1><%= @user.name.titleize %></h1>
+
+<h2>Recipes<h2>
+<ul>
+  <% @user.recipes.each do |recipe| %>
+    <li><%= link_to recipe.title, recipe %></li>
+  <% end %>
+</ul>
+
+<%= button_to "Delete", @user, method: :delete, data: { confirm: "Really?" } %>

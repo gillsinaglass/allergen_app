@@ -1,0 +1,6 @@
+<h1><%= @ingredient.name.titleize %></h1>
+<ul>
+  <% @ingredient.recipes.each do |recipe| %>
+    <li><%= link_to recipe.title, recipe %></li>
+  <% end %>
+</ul>
